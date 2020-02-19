@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testlogin.GestionFormationController">
+   <children>
+      <ImageView fitHeight="773.0" fitWidth="1070.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Interface%20module.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="supprimer" layoutX="39.0" layoutY="339.0" onAction="#supprimer" prefHeight="47.0" prefWidth="142.0" text="    supprimer">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-delete-bin-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="ajouter1" layoutX="39.0" layoutY="258.0" onAction="#ajouter" prefHeight="39.0" prefWidth="142.0" text="         Ajouter">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-add-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="table" layoutX="319.0" layoutY="164.0" prefHeight="329.0" prefWidth="602.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="177.0" text="id formation" />
+            <TableColumn fx:id="col_nom" onEditCommit="#modifierNomformatioln" prefWidth="177.0" text="Nom Formation" />
+            <TableColumn fx:id="col_type" onEditCommit="#modifiertypeformation" prefWidth="168.0" text="Type de formation" />
+            <TableColumn fx:id="col_nb" minWidth="9.0" prefWidth="145.0" text="Nombre de participant" />
+         </columns>
+      </TableView>
+      <Button fx:id="modifier" layoutX="39.0" layoutY="409.0" mnemonicParsing="false" onAction="#Signaler" prefHeight="47.0" prefWidth="142.0" text="      signaler">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-update-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechercher1" layoutX="348.0" layoutY="94.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="43.0" prefWidth="142.0" text="      chercher">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-search-more-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <JFXTextField fx:id="tnom" layoutX="42.0" layoutY="69.0" promptText="name" />
+      <JFXTextField fx:id="rechercher" layoutX="552.0" layoutY="104.0" prefHeight="25.0" prefWidth="135.0" promptText="cherche" />
+      <JFXComboBox fx:id="ttype" focusColor="#a84040" layoutX="42.0" layoutY="129.0" prefHeight="25.0" prefWidth="135.0" promptText="type" visibleRowCount="3" />
+      <JFXTextField fx:id="tnb" layoutX="42.0" layoutY="192.0" promptText="nombre de participant" />
+      <Button fx:id="telecharger" layoutX="39.0" layoutY="493.0" mnemonicParsing="false" onAction="#telecharger" prefHeight="47.0" prefWidth="142.0" text="telecharger">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-update-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
